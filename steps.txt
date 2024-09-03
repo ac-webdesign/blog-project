@@ -1,0 +1,60 @@
+
+Project Title: Simple Blog Application
+Project Overview:
+This project is a full-stack blog application developed as part of my Full Stack Web Development education. The application is built using Node.js and Express on the backend, with MongoDB as the database for storing blog posts. For the frontend, EJS (Embedded JavaScript) templating engine is used to dynamically render content. The project demonstrates the implementation of CRUD (Create, Read, Update, Delete) operations, routing, and the use of middleware in a web application.
+
+Key Features:
+User Interface: The application features a simple and clean user interface, styled with custom CSS files stored in the public directory.
+
+Dynamic Routing: Express.js routes are used to handle various HTTP requests. For example, the /blogs route displays all blog posts, while the /about route displays information about the blog.
+
+CRUD Operations: Users can create new blog posts, view a list of all posts, and delete existing posts. The application demonstrates fundamental CRUD operations, with data persistence managed through MongoDB.
+
+EJS Templating: The application uses EJS as the templating engine, allowing for dynamic content rendering on the server-side. This helps in creating reusable components and rendering views such as the home page, individual blog posts, and the "About" page.
+
+Middleware Integration: The application incorporates essential middleware such as:
+
+Morgan for logging HTTP requests, useful for debugging and monitoring.
+Express.urlencoded for parsing incoming request bodies.
+Express.static for serving static files like CSS from the public directory.
+MongoDB Integration: MongoDB Atlas is used as the database service to store blog post data. Mongoose is utilized as an Object Data Modeling (ODM) library to manage the data flow between the application and MongoDB.
+
+Error Handling: A custom 404 page is rendered when a user navigates to a non-existent route, ensuring a user-friendly experience.
+
+Folder Structure:
+controllers: Contains the logic for handling requests and responses.
+models: Houses the Mongoose models for defining the blog schema and interactions with MongoDB.
+routes: Defines the routing for blog-related actions.
+public: Contains all static files, including CSS for styling the application.
+views: Contains EJS templates that are rendered and served to the client.
+Technical Stack:
+Backend: Node.js, Express.js
+Frontend: EJS (Embedded JavaScript), CSS
+Database: MongoDB with Mongoose ORM
+Middleware: Morgan, Express.static, Express.urlencoded
+Hosting: The application is designed to be hosted locally on port 3000, with MongoDB connected through MongoDB Atlas.
+Installation & Setup:
+Clone the repository.
+Run npm install to install the necessary dependencies.
+Ensure MongoDB is set up and running.
+Start the server using node app.js.
+Access the application in the browser at http://localhost:3000.
+Conclusion:
+This blog application is a simple yet comprehensive project showcasing full-stack development skills. It integrates key technologies and demonstrates the ability to build a web application from the ground up, making it a valuable addition to my portfolio.
+
+
+1. create express app (app = express())
+2. listen for request (app.listen(3000))
+3. routes ( app.get('/', (req, res) => { res.render('home')}
+5. 404 page using app.use in the end 
+4. view engines ejs. create view folder and make inside the html with ejs.
+   create partial folder to include parts of the reusable html (head, footer etc) 
+5. add middleware
+	app.use(express.static('public')) create public folder put inside styles.css
+	app.use(morgan('dev')) for getting request data
+6. start mongodb
+7. create models folder and make Schema 
+8. start to make post request to send data to mongodb. Use app.use(express.urlencoded()) middleware
+9. send a delete request to the endpoint, make a script in frontend fe deleting a post
+10. add routes folder including the routes for blogs
+11. add controllers folder making every js file easy to read
