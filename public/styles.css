@@ -125,7 +125,14 @@ h3{
   color: #afafaf;
   line-height: 1.5;
   text-align: start;
+}
 
+/* Styling for blog timestamps */
+.blogs.content .timestamp {
+  font-size: 10px;
+  color: #999;
+  margin-top: 10px;
+  text-align: start;
 }
 
 /* Styling for the message when there are no blogs */

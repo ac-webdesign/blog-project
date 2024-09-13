@@ -5,11 +5,47 @@
     <%- include('./partials/nav.ejs') %>
 
     <div class="about content">
-        <h2>About us</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h2>About the project</h2>
+            <p>
+                <b>Project Title:</b> Simple Blog Application <br>
+                <b>Project Overview:</b><br>
+                This project is a full-stack blog application developed as part of my Full Stack Web Development education. The application is built using Node.js and Express on the backend, with MongoDB as the database for storing blog posts. For the frontend, EJS (Embedded JavaScript) templating engine is used to dynamically render content. The project demonstrates the implementation of CRUD (Create, Read, Update, Delete) operations, routing, and the use of middleware in a web application.
+                <br>
+                <b>Key Features:</b><br>    
+                User Interface: The application features a simple and clean user interface, styled with custom CSS files stored in the public directory.
+                
+                Dynamic Routing: Express.js routes are used to handle various HTTP requests. For example, the /blogs route displays all blog posts, while the /about route displays information about the blog.
+                
+                CRUD Operations: Users can create new blog posts, view a list of all posts, and delete existing posts. The application demonstrates fundamental CRUD operations, with data persistence managed through MongoDB.
+                
+                EJS Templating: The application uses EJS as the templating engine, allowing for dynamic content rendering on the server-side. This helps in creating reusable components and rendering views such as the home page, individual blog posts, and the "About" page.
+                
+                Middleware Integration: The application incorporates essential middleware such as:<br>
+                Morgan for logging HTTP requests, useful for debugging and monitoring.<br>
+                Express.static for serving static files like CSS from the public directory.<br>
+                MongoDB Integration: MongoDB Atlas is used as the database service to store blog post data. Mongoose is utilized as an Object Data Modeling (ODM) library to manage the data flow between the application and MongoDB.<br>
+                Error Handling: A custom 404 page is rendered when a user navigates to a non-existent route, ensuring a user-friendly experience.<br>
+                Folder Structure:<br>
+                controllers: Contains the logic for handling requests and responses.<br>
+                models: Houses the Mongoose models for defining the blog schema and interactions with MongoDB.<br>
+                routes: Defines the routing for blog-related actions.<br>
+                public: Contains all static files, including CSS for styling the application.<br>
+                views: Contains EJS templates that are rendered and served to the client.<br>
+                <b>Technical Stack:</b><br>
+                Backend: Node.js, Express.js<br>
+                Frontend: EJS (Embedded JavaScript), CSS<br>
+                Database: MongoDB with Mongoose ORM<br>
+                Middleware: Morgan, Express.static, Express.urlencoded<br>
+                Hosting: The application is designed to be hosted locally on port 3000, with MongoDB connected through MongoDB Atlas.<br>
+                <b>Installation & Setup:</b><br>
+                Clone the repository.<br>
+                Run npm install to install the necessary dependencies.
+                Ensure MongoDB is set up and running.<br>
+                Start the server using node app.js.<br>
+                Access the application in the browser at http://localhost:3000.<br>
+                <b>Conclusion:</b><br>
+                This blog application is a simple yet comprehensive project showcasing full-stack development skills. It integrates key technologies and demonstrates the ability to build a web application from the ground up, making it a valuable addition to my portfolio.
+            </p>
     </div>
     <%- include('./partials/footer.ejs') %>
 
